@@ -30,6 +30,17 @@ poetry run python -m unittest discover
 ```bash
 poetry show
 ```
+#### Set global python version
+```bash
+pyenv install 3.10.15
+pyenv global 3.10.15  # Activate Python 3.10 for the current project
+```
+#### Set local python version
+```bash
+pyenv install 3.10.15
+pyenv local 3.10.15  # Activate Python 3.10 for the current project
+poetry install
+```
 #### Create script
 1 - Edit `pyproject.toml`:
 ```toml
