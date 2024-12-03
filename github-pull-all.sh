@@ -23,6 +23,13 @@ repo_urls=(\
     "https://github.com/salesforce/spade.git" \
     "https://github.com/salesforce/acdc.git" \
     "https://github.com/salesforce/orchard-ui.git" \
+    "https://github.com/AIGeniusInstitute/AI-Agent-In-Action.git" \
+    "https://github.com/togethercomputer/together-cookbook.git" \
+    "https://github.com/microsoft/TinyTroupe" \
+    "https://github.com/microsoft/autogen.git" \
+    "https://github.com/awslabs/multi-agent-orchestrator.git" \
+    "https://github.com/Huanshere/VideoLingo.git" \
+    "git@github.com:hdlldh/ScriptVault.git" \
 ) 
 
 REPO_PATH="$HOME/Workspace/github"
@@ -32,7 +39,11 @@ for url in "${repo_urls[@]}"
 do
     repo=$(basename "$url" | cut -f 1 -d ".")
     path=$(dirname "$url")
-    owner=$(basename "$path")
+    if [[ $path == https* ]]; then
+        owner=$(basename "$path")
+    else
+        owner=$(echo "$path" | cut -f 2 -d ":")
+    fi
     destination=$HOME/Workspace/github/$owner
 
     echo "Checking $repo"
