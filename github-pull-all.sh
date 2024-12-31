@@ -28,6 +28,7 @@ repo_urls=(\
     "https://github.com/microsoft/TinyTroupe" \
     "https://github.com/microsoft/autogen.git" \
     "https://github.com/awslabs/multi-agent-orchestrator.git" \
+    "https://github.com/phidatahq/phidata.git" \
     "https://github.com/Huanshere/VideoLingo.git" \
     "git@github.com:hdlldh/ScriptVault.git" \
 ) 
