@@ -87,11 +87,13 @@ curl -s "https://get.sdkman.io" | bash
 ```
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 ```
-- install java, scala and spark
+- install java, scala, spark, sbt and maven
 ```
 sdk install java 11.0.18-zulu
 sdk install scala 2.12.18
 sdk install spark 3.3.1
+sdk install sbt 1.10.10
+sdk install maven 3.9.9
 ```
 - instal a new version of SDKMAN
 ```
