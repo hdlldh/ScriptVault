@@ -5,7 +5,7 @@ brew install uv
 ```
 ### Create a new project
 ```
-uv init explore-uv
+uv init `project_name`
 ```
 ### Add dependencies to the project
 ```
