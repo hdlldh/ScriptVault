@@ -1,53 +1,97 @@
-# UV Cheatsheet
-### Install UV
+# UV CLI Cheatsheet
+
+## General Usage
+```sh
+uv [OPTIONS] <COMMAND>
 ```
-brew install uv
+
+## Common Commands
+
+### Initialize a New Project
+```sh
+uv init
 ```
-### Create a new project
+Creates a new Python project in the current directory.
+
+### Add Dependencies to the Project
+```sh
+uv add <package_name>
 ```
-uv init `project_name`
+Installs the specified package and adds it to the project's dependencies.
+
+### Remove Dependencies from the Project
+```sh
+uv remove <package_name>
 ```
-### Add dependencies to the project
-```
-uv add `dependency_name`
-```
-### Remove dependencies from the project
-```
-uv remove `dependency_name`
-```
-### Update the project’s environment
-```
+Uninstalls the specified package and removes it from the project's dependencies.
+
+### Synchronize Project Environment
+```sh
 uv sync
 ```
-### Update the project’s lockfile
-```
+Ensures the project's environment matches the defined dependencies.
+
+### Update the Lockfile
+```sh
 uv lock
 ```
-### Export the project’s lockfile to an alternate format
-```
+Regenerates the project's lockfile based on current dependencies.
+
+### Export Lockfile
+```sh
 uv export
 ```
-### Display the project’s dependency tree
-```
+Exports the lockfile to another format, such as `requirements.txt`.
+
+### Display Dependency Tree
+```sh
 uv tree
 ```
-### Run and install commands provided by Python packages
+Shows a hierarchical view of the project's dependencies.
+
+### Run Commands in Project Environment
+```sh
+uv run <command>
 ```
-uv tool
+Executes the specified command within the project's environment.
+
+### Manage Python Versions
+```sh
+uv python <subcommand>
 ```
-### Manage Python versions and installations
+Handles Python installations and versions.
+
+### Manage Virtual Environments
+```sh
+uv venv <subcommand>
 ```
-uv python
-```
-### Build Python packages into source distributions and wheels
-```
+Creates and manages virtual environments.
+
+### Build Distributions
+```sh
 uv build
 ```
-### Upload distributions to an index
-```
+Builds source distributions and wheels for the project.
+
+### Publish Distributions
+```sh
 uv publish
 ```
-### Manage uv’s cache
+Uploads distributions to a package index.
+
+### Manage Cache
+```sh
+uv cache <subcommand>
 ```
-uv cache
+Handles `uv`'s cache, including cleaning and pruning.
+
+### Update `uv` Executable
+```sh
+uv self update
+```
+Updates the `uv` executable to the latest version.
+
+### Display Version Information
+```sh
+uv version
 ```
