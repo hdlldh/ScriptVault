@@ -1,8 +1,8 @@
 # UV CLI Cheatsheet
 
-## General Usage
+## Installation
 ```sh
-uv [OPTIONS] <COMMAND>
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 ## Common Commands
