@@ -9,9 +9,16 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ### Initialize a New Project
 ```sh
-uv init
+uv init project_name
 ```
 Creates a new Python project in the current directory.
+
+### Initialize a New Project with an Application Layout
+```
+mkdir project_name && cd project_name
+uv init --app
+```
+Create a new Python project with an application layout
 
 ### Add Dependencies to the Project
 ```sh
