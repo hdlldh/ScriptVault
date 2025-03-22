@@ -7,16 +7,15 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ## Common Commands
 
-### Initialize a New Project
+### Create a project for an application
 ```sh
 uv init project_name
+uv init --app project_name
 ```
-Creates a new Python project in the current directory.
 
-### Initialize a New Project with an Application Layout
+### Create a project for a library
 ```
-mkdir project_name && cd project_name
-uv init --app
+uv init --lib project_name
 ```
 Create a new Python project with an application layout
 
