@@ -95,3 +95,9 @@ Updates the `uv` executable to the latest version.
 ```sh
 uv version
 ```
+
+### Linting, Sorting Imports and Formating
+```
+uvx ruff check --select I --fix
+uvx ruff format
+```
